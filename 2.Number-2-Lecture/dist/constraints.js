@@ -6,4 +6,5 @@ const addToCourseStudent = (student) => {
     return Object.assign(Object.assign({}, student), { course });
 };
 const student1 = addToCourseStudent({ id: 1, name: "Abdul", email: "Amin", devType: "FullStack", enrollent: true });
+const student2 = addToCourseStudent({ id: 1, name: "Abdul", email: "Amin", devType: "FullStack", enrollent: true });
 console.log(student1);
