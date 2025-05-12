@@ -129,6 +129,24 @@ const overrideResult = new VehicleOver("VHO-562", "Tesla #3", 300);
 console.log(overrideResult.getName())
 console.log(overrideResult.toStr())
 
+// ABSTRACT CLASS METHOD 
+abstract class Polygon {
+    public abstract getArea(): number;
 
+    public toStr(): string {
+        return `Polygon[area=${this.getArea()}]`
+    }
+};
 
+class Triangle extends Polygon {
+    public constructor(protected readonly width: number, protected readonly height: number) {
+        super();
+    }
+    public getArea(): number {
+        return ((1 / 2) * this.width * this.height);
+    }
+};
+
+const absResult = new Triangle(50, 10);
+console.log(absResult.getArea())
 
